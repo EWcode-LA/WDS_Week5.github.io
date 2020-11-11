@@ -82,10 +82,19 @@ var x = {}; // Object, this is empty object
       $container.append($row);
     }
   }
-  function showCurrentDay() {
-  // Display the day of the week and current date
-  }
 
+  function showCurrentDay() {
+  //Display the day of the week and current date
+  var today = moment().format('dddd'); // get the current date: "Sunday"
+  var currentDate = moment().format("MMMM Do"); // this is "November 8th"
+  // Display "Sunday, Nov 8th"
+  $('#currentDay').text(today + ',' + currentDate); 
+  console.log(showCurrentDay);
+  }
+ // $currentDay.moment().format();
+  //console.log($currentDay)
+
+  
   
   function initialize() {
     // Retrieve schedule data from local storage, if any
